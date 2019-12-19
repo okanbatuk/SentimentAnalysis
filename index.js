@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require("body-parser");
+const auth = require('./router/auth')
 const port = process.env.PORT||3000
 
 var cors = require('cors');
@@ -15,6 +16,8 @@ const verifyToken = require('./middleware/verifyToken');
 const jwtConfig = require ('./config/jwtConfig');
 app.set('api_key', jwtConfig.api_key);
 
+
+app.use('/',auth)
 app.use('/api/',verifyToken);
 
 
