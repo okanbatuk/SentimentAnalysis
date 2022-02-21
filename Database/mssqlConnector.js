@@ -3,12 +3,6 @@ var pool = null;
 
 const config =
 {
-    "user": 'stuxnet',
-    "password": 'stuxnet258456',
-    "server": '34.69.224.215', 
-    "database": 'dbComment', 
-    "port": 1433, 
-    "dialect": "mssql",
 };
 
 module.exports.getConnection = async () => {
